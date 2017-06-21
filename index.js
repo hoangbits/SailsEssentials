@@ -12,10 +12,8 @@ var app = express();
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    //express determine common header type.
-    //   res.send({name: "hoang"});//Content-Type →application/json; charset=utf-8
-    // res.send("<h1>no more than h111111</h1>");// Content-Type →text/html; charset=utf-8
-      res.send(new Buffer("Hard damm!!!")); //Content-Type →application/octet-stream
+    // _dirname will provide the location of project directory
+    res.sendFile(__dirname + '/htmlFileAsResponse.html');
 });
 
 //navigate all router to proceed /home
