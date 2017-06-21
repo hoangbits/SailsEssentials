@@ -15,6 +15,13 @@ router.get('/', (req, res) => {
     // _dirname will provide the location of project directory
     res.sendFile(__dirname + '/htmlFileAsResponse.html');
 });
+//no mount path, so this function is executed every time the app receives a request.
+app.use( (req,res,next) => {
+  console.log("Route is " + req.path + " and type is " + req.method);
+  //pass the execution to next middleware or router
+  next();
+});
+
 
 //navigate all router to proceed /home
 app.use('/home', router);
