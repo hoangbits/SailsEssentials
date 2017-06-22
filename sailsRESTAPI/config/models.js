@@ -1,3 +1,4 @@
+
 /**
  * Default model configuration
  * (sails.config.models)
@@ -18,6 +19,7 @@ module.exports.models = {
   *                                                                          *
   ***************************************************************************/
   // connection: 'localDiskDb',
+  connection: 'mysqlAdapter',
 
   /***************************************************************************
   *                                                                          *
@@ -27,6 +29,6 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  // migrate: 'alter'
+  migrate: 'safe'
 
 };
