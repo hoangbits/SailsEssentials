@@ -45,7 +45,7 @@ module.exports.connections = {
     host: 'localhost',
     user: 'root', //optional
     password: 'root', //optional
-    database: 'sailsApi' //optional
+    database: 'chatDemo' //optional
   },
 
   /***************************************************************************
